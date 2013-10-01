@@ -5,19 +5,21 @@ def spiral(array)
 # read_array
 array_holder = array
 
-# determine array_holder size
-n = array_holder.length
-m = array_holder[0].length
+spial_array = []
+
+# determine array_holder size N x M
+n = array_holder[0].length
+m = array_holder.length
 
 puts "#{n}"
 puts "#{m}"
 
-#count number of indices in array holder
+# get first row (0)
+spiral_array << array_holder[0]
 
 
-# get first row
 
-# get last column
+# get last column ( for 0 to n-1)
 
 # get last row
 # 	reverse last row
@@ -32,7 +34,7 @@ puts "#{m}"
 end
 
 # test_array = []
-test_array = [[1,2,3],  [8,9,4],  [7,6,5]]
+test_array = [[1,2,3,4,5],  [8,9,4,7,9],  [7,6,5,3,5]]
 
 spiral(test_array)
 
