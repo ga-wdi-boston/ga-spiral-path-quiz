@@ -9,6 +9,9 @@ array_holder = array
 n = array_holder.length
 m = array_holder[0].length
 
+puts "#{n}"
+puts "#{m}"
+
 #count number of indices in array holder
 
 
@@ -28,8 +31,8 @@ m = array_holder[0].length
 
 end
 
-test_array = []
-#test_array = [[1,2,3],  [8,9,4],  [7,6,5]]
+# test_array = []
+test_array = [[1,2,3],  [8,9,4],  [7,6,5]]
 
 spiral(test_array)
 
