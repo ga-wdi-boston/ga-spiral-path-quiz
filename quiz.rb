@@ -1,11 +1,11 @@
 # Your code goes here
 
-require 'pry'
+# require 'pry'
 
 
-array = [[11, 12, 13, 14, 15, 16],
-         [24, 25, 26, 27, 28, 17],
-         [23, 22, 21, 20, 19, 18]]
+# array = [[11, 12, 13, 14, 15, 16],
+#          [24, 25, 26, 27, 28, 17],
+#          [23, 22, 21, 20, 19, 18]]
 
 # array = [[11, 12, 13, 14, 15, 16, 17],
 #          [26, 27, 28, 29, 30, 31, 18],
@@ -16,16 +16,16 @@ array = [[11, 12, 13, 14, 15, 16],
 #          [23, 30, 29, 28, 17],
 #          [22, 21, 20, 19, 18]]
 
-# array = [
-#    		[1, 2, 3, 4, 5, 6],
-# 		[14, 15, 16, 17, 18, 7], 
-# 		[13, 12, 11, 10, 9, 8]]
+array = [
+   		[1, 2, 3, 4, 5, 6],
+		[14, 15, 16, 17, 18, 7], 
+		[13, 12, 11, 10, 9, 8]]
 
 
 def spiral(arr)
   spiral = []
 
-   while arr[0].length > 0
+   while arr[0]
 
     arr.first.length.times do 
       spiral << arr.first.shift
@@ -37,9 +37,11 @@ def spiral(arr)
       spiral << x.pop
     end
 
-    arr.last.length.times do 
-      spiral << arr.last.pop
-    end
+    if arr.last
+	    arr.last.length.times do 
+	      spiral << arr.last.pop
+	    end
+	end
     
     arr.pop
 
@@ -48,10 +50,15 @@ def spiral(arr)
       spiral << arr[x].shift
     end
    
-    return spiral
-
   end
 
+
+
+  while arr.length > 0 do
+  	spiral << arr.shift
+  end
+
+return spiral
 end
 
 
