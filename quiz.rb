@@ -1,12 +1,8 @@
 def spiral(two_d_array)
-  
   path = []
-  spin = 2 * [two_d_array.length, two_d_array[0].length].min
-
-  spin.times do
-    path << two_d_array.delete_at(0)
-    two_d_array = two_d_array.transpose.reverse  
+  until two_d_array.empty?
+    path += two_d_array.delete_at(0)
+    two_d_array = two_d_array.transpose.reverse
   end
-
-  path.flatten.compact
+  path
 end
