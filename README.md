@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/callen6/ga-spiral-path-quiz/badge.png)](https://coveralls.io/r/callen6/ga-spiral-path-quiz)
+
 # Spiral Path
 
 Write a function called "spiral" that takes an NxM array as input and returns a "spiral" path through the array, starting in the upper-left corner and moving clockwise.  Use the  language of your choice.
